@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/logo.png" alt="PizzaScript Logo" width="150" />
-</p>
-
 # 🍕✨ PizzaScript ✨🍕
 
 PizzaScript è un'applicazione web realizzata con Angular che simula il funzionamento di una pizzeria digitale.  
