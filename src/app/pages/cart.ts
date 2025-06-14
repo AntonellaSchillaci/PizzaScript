@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   selector: 'app-carrello',
   standalone: true,
   imports: [CommonModule],
+  styleUrls: ['./cart.css'],
   template: `
     <div class="cart-container py-4 px-3">
       <h2 class="text-center mb-4">Carrello</h2>
@@ -42,8 +43,8 @@ import { Router } from '@angular/router';
         </div>
 
         <div class="text-center mt-4">
-          <button class="btn btn-pink btn-lg" (click)="acquista()">
-            Paga / Acquista
+          <button class="btn btn-pink btn-lg" (click)="buy()">
+            Paga / buy
           </button>
         </div>
       </div>
@@ -76,37 +77,7 @@ import { Router } from '@angular/router';
       </div>
     </div>
   `,
-  styles: [
-    `
-      .cart-container {
-        background: linear-gradient(135deg, #ffe6f0, #ff99cc);
-        color: #4b004b;
-        min-height: 80vh;
-        border-radius: 15px;
-        box-shadow: 0 8px 15px rgba(255, 105, 180, 0.3);
-      }
-      .cart-img {
-        width: 60px;
-        height: 60px;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-      .btn-pink {
-        background-color: #ff66b2;
-        color: white;
-        border: none;
-      }
-      .btn-pink:hover {
-        background-color: #e0559d;
-        color: white;
-      }
-      input[type='number']::-webkit-inner-spin-button,
-      input[type='number']::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-    `,
-  ],
+
 })
 export class CartComponent {
   showModal = false;
@@ -138,7 +109,7 @@ export class CartComponent {
     pizza.quantity = isNaN(qty) || qty < 0 ? 0 : qty;
   }
 
-  acquista() {
+  buy() {
     this.showModal = true;
   }
 

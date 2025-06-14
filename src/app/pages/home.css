@@ -1,0 +1,28 @@
+.home-container {
+  background: linear-gradient(135deg, #ffe6f0, #ff99cc);
+  color: #4b004b;
+  min-height: 80vh;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(255, 105, 180, 0.3);
+}
+
+a.text-pink {
+  color: #d6336c;
+  text-decoration: none;
+}
+
+a.text-pink:hover {
+  text-decoration: underline;
+  color: #a02149;
+}
+
+.btn-pink {
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #e0559d;
+  color: white;
+}
