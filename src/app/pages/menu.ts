@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PizzaService } from '../services/pizza.service';
 import { Pizza } from '../../models/pizza.model';
@@ -21,6 +21,9 @@ import { RouterLink } from '@angular/router';
           aria-label="Vai al carrello"
         >
           <i class="bi bi-cart3"></i>
+          <span *ngIf="totalQuantity() > 0" class="cart-counter">
+            {{ totalQuantity() }}
+          </span>
         </button>
       </div>
 
@@ -73,17 +76,25 @@ import { RouterLink } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
   pizzas = signal<Pizza[]>([]);
+  totalQuantity = computed(() =>
+    this.pizzas().reduce((sum, pizza) => sum + (pizza.quantity ?? 0), 0)
+  );
 
   constructor(private pizzaService: PizzaService) {}
 
   ngOnInit(): void {
-    if (this.pizzaService.getPizzasSignal()().length === 0) {
+    const pizzasFromService = this.pizzaService.getPizzasSignal();
+    if (pizzasFromService().length === 0) {
       this.pizzaService.getPizzas().subscribe({
-        next: (data) => this.pizzaService.setPizzas(data),
+        next: (data) => {
+          this.pizzaService.setPizzas(data);
+          this.pizzas = this.pizzaService.getPizzasSignal();
+        },
         error: (err) => console.error('Errore caricamento pizze', err),
       });
+    } else {
+      this.pizzas = pizzasFromService;
     }
-    this.pizzas = this.pizzaService.getPizzasSignal();
   }
 
   incrementQuantity(pizza: Pizza) {

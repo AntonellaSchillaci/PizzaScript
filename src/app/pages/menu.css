@@ -64,8 +64,25 @@ button.btn-danger:hover {
   cursor: pointer;
   transition: background-color 0.3s ease;
   z-index: 1000;
+  position: fixed;
 }
 
 .fab-cart:hover {
   background-color: #e0559d;
+}
+
+.cart-counter {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #4b004b;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 7px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+  min-width: 22px;
+  text-align: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
