@@ -88,13 +88,11 @@ export class MenuComponent implements OnInit {
       this.pizzaService.getPizzas().subscribe({
         next: (data) => {
           this.pizzaService.setPizzas(data);
-          this.pizzas = this.pizzaService.getPizzasSignal();
         },
         error: (err) => console.error('Errore caricamento pizze', err),
       });
-    } else {
-      this.pizzas = pizzasFromService;
     }
+    this.pizzas = pizzasFromService;
   }
 
   incrementQuantity(pizza: Pizza) {
