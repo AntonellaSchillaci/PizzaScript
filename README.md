@@ -1,59 +1,37 @@
-# PizzeriaApp
+# 🍕✨ PizzaScript ✨🍕
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+PizzaScript è un'applicazione web realizzata con Angular che simula il funzionamento di una pizzeria digitale.  
+Consente di visualizzare un menu di pizze artigianali, aggiungerle al carrello, modificare le quantità e completare un ordine con un’interfaccia semplice e moderna. 💖
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Caratteristiche principali
 
-```bash
-ng serve
-```
+- Visualizzazione dinamica del menu delle pizze 🍕  
+- Gestione del carrello con quantità modificabili 🛒  
+- Modalità di pagamento simulata con conferma ordine ✅  
+- Design responsive e colori rosa pastello 💗  
+- Utilizzo di Angular Signals per la gestione dello stato ✨  
+- Routing con Angular Router per navigazione fluida 🔄
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🌐 Prova il sito online
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+👉 [https://pizza-script.vercel.app/](https://pizza-script.vercel.app/) 👈
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠️ Tecnologie utilizzate
 
-```bash
-ng generate --help
-```
+- Angular 16+  
+- Bootstrap per lo styling  
+- TypeScript  
+- Angular Signals e Standalone Components  
+- Vercel per il deploy
 
-## Building
+---
 
-To build the project run:
+Grazie per aver visitato PizzaScript, dove ogni fetta è un sorriso! 😊🍕
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+*Creato con 💖 e Angular*
